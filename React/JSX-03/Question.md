@@ -1,3 +1,3 @@
 What happens if the `name` variable is not passed to the function?
 
-<!-- An error would occur. -->
+<!-- An error would occur! -->
