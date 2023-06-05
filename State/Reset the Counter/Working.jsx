@@ -8,7 +8,7 @@ export class Counter extends React.Component {
     constructor(props) {
         super(props)
 
-        setInterval(() => {
+        this._interval = setInterval(() => {
             this.setState((state) => {
                 const newValue = state.count + 1;
                 const prepsValue = this.props.initialValue * 10;
@@ -24,6 +24,12 @@ export class Counter extends React.Component {
                 }
             })
         }, 1000);
+    }
+
+    componentWillUnmount() {
+        if(this._interval) {
+            clearInterval(this._interval)
+        }
     }
 
     render() {
