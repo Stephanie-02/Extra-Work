@@ -32,6 +32,18 @@ export class Counter extends React.Component {
         }
     }
 
+    componentDidUpdate(newValue, prepsValue) {
+        if (newValue > prepsValue) {
+            return {
+              count: this.props.initialValue,
+            };
+        }
+
+        return {
+            count: newValue,
+        }
+    }
+
     render() {
         return (
             <div>
