@@ -4,7 +4,11 @@ import LoginComponent  from './LoginComponent';
 import ClickCounter from './ClickCounter';
 import Colors from './Colors';
 
-const colorsItems = ['Red','Blue','Green']
+const colorsItems = [
+    { id: 1, name: 'Red' },
+    { id: 2, name: 'Blue' },
+    { id: 3, name: 'Green' },
+]
 
 export default class App extends React.Component {
     render() {
